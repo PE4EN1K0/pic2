@@ -1,16 +1,15 @@
-import asyncio
+import asyncio # Асинхронное программирование
 
-from telebot import TeleBot
-from telebot.types import Message, CallbackQuery
-import os
+from telebot import TeleBot # инструкция для подключения telebot
+from telebot.types import Message, CallbackQuery # импорт библиотек Message, CallbackQuery
+import os # импорт библиотек os
 
-from carbonAPI import carbonPhoto
-from config import Config
+from carbonAPI import carbonPhoto # импорт библиотеки carbonPhoto
+from config import Config # импорт конфигурационных файлов
 from buttons import themes, colors, main_menu, remove_keyboard
 from db_connector import sql_con, new_user, \
-    updater_theme, updater_color, existing_checker, \
-    themeANDcolor
-
+updater_theme, updater_color, existing_checker, \
+themeANDcolor
 bot = TeleBot(
     token=Config.bot_token,
     parse_mode="Markdown"
